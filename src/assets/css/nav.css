@@ -1,0 +1,115 @@
+.navbar {
+    transition: all 0.2s;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none;
+    transition: all 0.3s;
+}
+
+
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler:active {
+    border: none;
+    background-color: black;
+    .navbar-toggler-icon {
+        filter:brightness(100);
+    }
+}
+
+
+.navbar-brand {
+    margin-left: 3vw;
+}
+
+
+#container-navbar {
+    overflow: hidden;
+}
+
+#btn-in-small {
+    display: none;
+}
+
+#btn-in-wide {
+    color: rgb(168, 168, 168);
+    width: fit-content;
+    text-align: center;
+}
+
+#btn-in-wide:hover {
+    color: black;
+    width: fit-content;
+}
+
+#nav-list {
+    justify-content: right;
+    width: 80%;
+    color: aliceblue;
+}
+
+.navbar-nav li {
+    margin-left: 3vw;
+}
+
+.navbar-nav li a {
+    color: rgb(168, 168, 168);
+    transition: all 0.3s;
+    border-radius: 5px;
+    width: 4vw;
+    text-align: center;
+}
+
+.navbar-nav li a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+
+.search-bar img:hover{
+    cursor: pointer;
+}
+
+.modal-backdrop {
+    z-index: 20;
+}
+
+.nav-inactive-color {
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.nav-active-color {
+    padding: 1.5vh;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.nav-shadow {
+    background-color: rgb(255, 255, 255);
+    padding: 1.5vh;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-footer .btn {
+    border: solid 1px;
+    transition: all 0.2s 
+}
+
+.modal-footer .btn:active {
+    border: solid 1px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+.modal {
+    transition: all 0.5s;
+}
