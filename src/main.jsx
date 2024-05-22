@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Background from './components/bg';
@@ -21,7 +21,7 @@ const App = () => (
       <section className="presentation" id="presentation">
         <div className="info">
           <div className="info-text">
-            <h1>Presentación</h1>
+            <h1>¿Quién soy?</h1>
             <p>
               Soy un artista digital apasionado por diversos movimientos artísticos, que a menudo inspiran mis dibujos. Además, la música es una gran influencia en mi trabajo, por lo que suelo acompañar mis publicaciones con canciones que complementan mis creaciones.
             </p>
@@ -41,18 +41,28 @@ const App = () => (
           </div>
         </div>
         <CreateCardGroup />
-        <div className="info-all" id='final'>
-          <div className="info-text-more final">
-            <h1>Además</h1>
-            <p>
-              Me interesa el desarrollo web, por eso fui yo quien desarrolló esta pequeña landing page utilizando React y Bootstrap.
-            </p>
-            <div className='final-images'></div>
-            <a className="icon" href="https://es.react.dev/"><img src={reicon} width="120px" height="140px" alt="Logo" /></a>
-            <a className="icon" href="https://getbootstrap.com/"><img src={boicon} width="120px" height="140px" alt="Logo" /></a>
+        <button type="button" className="btn final" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          ?
+        </button>
+      </section>
+
+      <div className="modal fade extra" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+              <button type="button" className="btn-close close-final" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal-body modal-final">
+              <h1>Además</h1>
+              <p>
+                Me interesa el desarrollo web, por eso fui yo quien desarrolló esta pequeña landing page utilizando React y Bootstrap.
+              </p>
+              <div className='final-images'></div>
+              <a className="icon" href="https://es.react.dev/"><img src={reicon} width="120px" height="140px" alt="Logo" /></a>
+              <a className="icon" href="https://getbootstrap.com/"><img src={boicon} width="120px" height="140px" alt="Logo" /></a>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+
     </section>
 
     <div className="container">
@@ -60,14 +70,15 @@ const App = () => (
         <p className="col-md-4 mb-0 text-body-secondary">© 2024 Leallicna</p>
 
         <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li className="ms-3"><a className="text-body-secondary" href="https://www.instagram.com/leallicna/"><img src={icon} width="25px" id="footer-img" /></a></li>
+          <li className="ms-3"><a className="text-body-secondary" href="https://www.instagram.com/leallicna/"><img src={icon} width="25px" id="footer-img" alt="Icon" /></a></li>
         </ul>
       </footer>
     </div>
   </React.Fragment>
 );
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+ReactDOM.render(<App />, document.getElementById('root'));
+
 
 
 
