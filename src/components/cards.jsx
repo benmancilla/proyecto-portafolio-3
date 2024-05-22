@@ -29,7 +29,7 @@ const CreateCardGroup = () => {
     useEffect(() => {
         const handleWidth = () => {
             if (window.innerWidth <= 426) {
-                setMode(<div id="card-carousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+                setMode(<div id="card-carousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="7000" data-touch="true">
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
                                     <div className="row row-cols-1 row-cols-md-5 g-4" id="info">
