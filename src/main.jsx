@@ -10,9 +10,13 @@ import LiveCount from './components/posts';
 import icon from './assets/img/icon.svg';
 import reicon from './assets/img/react-icon.svg';
 import boicon from './assets/img/bootstrap-icon.svg';
+import css from './assets/img/css-icon.svg';
 import './index.css';
 import './assets/css/nav.css';
+import './assets/css/btn.css'
 import './assets/css/more.css';
+import'./assets/css/scroll.css';
+import'./assets/css/final.css';
 
 const App = () => (
   <React.Fragment>
@@ -34,16 +38,13 @@ const App = () => (
       <section className="more" id={`more-${Background()}`}>
         <div className={`info-all info-more-${Background()}`}>
           <div className="info-text-more">
-            <h1><LiveCount /> ilustraciones hasta el momento</h1>
-            <p>
+            <h1 id='glow'><LiveCount/> ILUSTRACIONES</h1>
+            <h2>
               Actualmente llevo más de 100 ilustraciones, algunas mejores que otras. Aquí algunas de mis favoritas:
-            </p>
+            </h2>
           </div>
         </div>
         <CreateCardGroup />
-        <button type="button" className="btn final" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          ?
-        </button>
       </section>
 
       <div className="modal fade extra" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -51,18 +52,24 @@ const App = () => (
           <div className="modal-content">
               <button type="button" className="btn-close close-final" data-bs-dismiss="modal" aria-label="Close"></button>
             <div className="modal-body modal-final">
-              <h1>Además</h1>
-              <p>
-                Me interesa el desarrollo web, por eso fui yo quien desarrolló esta pequeña landing page utilizando React y Bootstrap.
-              </p>
-              <div className='final-images'></div>
-              <a className="icon" href="https://es.react.dev/"><img src={reicon} width="120px" height="140px" alt="Logo" /></a>
-              <a className="icon" href="https://getbootstrap.com/"><img src={boicon} width="120px" height="140px" alt="Logo" /></a>
+
             </div>
           </div>
         </div>
       </div>
+    </section>
 
+    <section className='final'>
+      <h1>Además</h1>
+      <p>
+        Me interesa el desarrollo web, por eso fui yo quien desarrolló esta pequeña landing page utilizando React, Bootstrap y CSS, no es mucho pero es trabajo honesto.
+      </p>
+      <div className='final-images'>
+        <a className="icon" href="https://es.react.dev/" target="_blank"><img src={reicon} width="120px" height="140px" alt="Logo" /></a>
+        <a className="icon" href="https://getbootstrap.com/" target="_blank"><img src={boicon} width="120px" height="140px" alt="Logo" /></a>
+        <a className="icon" href="https://www.w3.org/Style/CSS/" target="_blank"><img src={css} width="120px" height="140px" alt="Logo" /></a>
+
+      </div>
     </section>
 
     <div className="container">
@@ -70,7 +77,7 @@ const App = () => (
         <p className="col-md-4 mb-0 text-body-secondary">© 2024 Leallicna</p>
 
         <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li className="ms-3"><a className="text-body-secondary" href="https://www.instagram.com/leallicna/"><img src={icon} width="25px" id="footer-img" alt="Icon" /></a></li>
+          <li className="ms-3"><a className="text-body-secondary" href="https://www.instagram.com/leallicna/" target="_blank"><img src={icon} width="25px" id="footer-img" alt="Icon" /></a></li>
         </ul>
       </footer>
     </div>

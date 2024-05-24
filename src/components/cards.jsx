@@ -14,9 +14,9 @@ const CreateCard = ({img,name,alt,url1}) => {
     return (  
         <div className="col">
             <div className="card">
-            <div style={{ backgroundImage: `url(${img})` }} className="card-img-top" id="card-paint" alt={alt} onClick={() => window.location.href = url1}></div>
+            <div style={{ backgroundImage: `url(${img})` }} className="card-img-top" id="card-paint"  alt={alt} onClick={() => window.open(url1, '_blank')} target="_blank"></div>
                 <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
+                    <h5 className="card-title">"{name}"</h5>
                 </div>
             </div>
         </div>
