@@ -1,15 +1,19 @@
 .navbar {
-    transition: all 0.2s;
-    background-color: rgb(255, 255, 255);
+    background-image: url(/src/assets/img/1f1f1f.png);
+    background-size: cover;
+    transition: all 0.4s;
 }
 
 .navbar-toggler {
     border: none;
     box-shadow: none;
     transition: all 0.3s;
+    filter: brightness(100);
 }
 
-
+.navbar-nav li a:focus {
+    color: rgb(138, 138, 138);
+}
 
 .navbar-toggler:focus {
     outline: none;
@@ -27,6 +31,7 @@
 
 .navbar-brand {
     margin-left: 3vw;
+    filter: contrast(0) brightness(100);
 }
 
 
@@ -60,7 +65,7 @@
 }
 
 .navbar-nav li a {
-    color: rgb(168, 168, 168);
+    color: rgb(138, 138, 138);
     transition: all 0.3s;
     border-radius: 5px;
     width: 4vw;
@@ -68,7 +73,7 @@
 }
 
 .navbar-nav li a:hover {
-    color: black;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -82,21 +87,53 @@
 }
 
 .nav-inactive-color {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     transition: all 0.3s;
+    .navbar-brand {
+        filter: brightness();
+    }
 }
 
 .nav-active-color {
-    padding: 1.5vh;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    transition: all 0.3s;
+    margin: 1.5vh;
+    padding: 0.5vh 0vw;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+    background-image: url('/src/assets/img/invert.JPG');
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    animation: moveBackground 60s linear infinite;
+    .navbar-nav li a {
+        color: rgb(0, 0, 0);
+    }
+    .navbar-nav li a:hover {
+        color: rgb(255, 255, 255);
+    }
+    .navbar-brand {
+        filter: contrast(1) brightness(1);
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 99.2%;
+    }
 }
 
 .nav-shadow {
-    background-color: rgb(255, 255, 255);
-    padding: 1.5vh;
-    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+    margin: 1.5vh;
+    padding: 0.5vh 0vw;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    transition: all 0.3s;
+    .navbar-nav li a:hover {
+        color: rgb(255, 255, 255);
+    };
+    .navbar-nav li a {
+        color: rgb(138, 138, 138);
+    }
 }
 
 .modal-footer .btn {
@@ -112,4 +149,23 @@
 
 .modal {
     transition: all 0.5s;
+}
+
+@media screen  and (max-width: 769px){
+    .nav-shadow {
+        border-radius: 0;     
+        margin: 0vh;
+        padding: 0vh 0vw;}
+    
+    .nav-inactive-color {
+        border-radius: 0;    
+        margin: 0vh;
+        padding: 0vh 0vw;
+    }
+    
+    .nav-active-color {
+        border-radius: 0;    
+        margin: 0vh;
+        padding: 0vh 0vw;
+    }
 }

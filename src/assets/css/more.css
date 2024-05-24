@@ -5,19 +5,39 @@
     height: fit-content;
     padding-bottom: 7vh;
     padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-bottom: 15vh;
     
 }
 
+@keyframes brillar {
+    0% { text-shadow: 0 0 10px #fff; }
+    50% { text-shadow: 0 0 30px #ffffff;}
+    100% { text-shadow: 0 0 10px #fff; }
+}
+
+
+#glow {
+    font-size: 45px;
+    animation: brillar 3s infinite; 
+}
+
+#join-text{
+    display: flex;
+    align-items: center;
+
+}
 
 #more-bg1 {
     opacity: 0;
-    transition: all 0.5s ease-out;
+    padding-top: 20vh;
+    transition: all 0.5s ;
+    padding-bottom: 0vh
 }
 
 #more-bg2 {
     opacity: 1;
-    transition: all 0.5s ease-in;
+    padding-top: 10vh;
+    transition: all 0.5s ;
 }
 
 .info-all {
@@ -25,6 +45,8 @@
     text-align: center;
     transition: 0.5s;
 }
+
+
 
 .info-text-more {
     align-content: center;
@@ -34,8 +56,8 @@
     margin-bottom: 2vh;
 }
 
-.info-text-more p {
-    font-size: 16px;
+.info-text-more h2 {
+    font-size: 20px;
     margin-bottom: 1vh;
 }
 
@@ -58,15 +80,37 @@
     width: 100%;
     height: 50vh;
 }
+
+.carousel-control-next-icon{
+    transition: all 0.3s;
+}
+
+.carousel-control-prev-icon{
+    transition: all 0.3s;
+}
+
 .carousel-btn {
     height: 8vh;
     width: 4vw;
     margin: 8vw;
+    background-color: none;
+    border-radius: 20px;
+    align-self: center;
+    transition: all 0.3s;
+}
+
+.carousel-btn:hover {
     border:solid #ffffff;
     background-color: #ffffff;
     border-radius: 20px;
     align-self: center;
-    transition: all 0.3s;
+    .carousel-control-next-icon{
+        filter: brightness(0);
+    }
+    
+    .carousel-control-prev-icon{
+        filter: brightness(0);
+    }
 }
 
 .carousel-btn:active {
@@ -75,15 +119,15 @@
     background-color: #ffffff;
     border-radius: 20px;
     align-self: center;
+    .carousel-control-next-icon{
+        filter: brightness(0);
+    };
+    .carousel-control-prev-icon{
+        filter: brightness(0);
+    };
 }
 
-.carousel-control-next-icon{
-    filter: brightness(0);
-}
 
-.carousel-control-prev-icon{
-    filter: brightness(0);
-}
 
 #info {
     display: flex;
@@ -93,6 +137,21 @@
 
 .card {
     border: none;
+    background-image: url('/src/assets/img/invert.JPG');
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: moveBackground 60s linear infinite;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
+    height: fit-content;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 99.2%;
+    }
 }
 
 .card-body {
@@ -100,8 +159,10 @@
     transition: height 0.4s;
 }
 
+
 .card-body h5{
-    font-size: 15px;
+    color: #70006e;
+    font-size: 16px;
 }
 
 .card-img-top{
@@ -114,54 +175,6 @@
     cursor: pointer;
 }
 
-
-.final {
-    margin-top: 10vh;
-    background-color: #ffffff81;
-    backdrop-filter: blur(2px);
-    color: rgb(0, 0, 0);
-    padding: 1vh 2vw;
-    font-size: 30px;
-    margin-bottom: 6vh;
-    transition: all 0.2s;
-    border-radius: 100px;
-}
-
-
-.final:hover{
-    background-color: #ffffff;
-    backdrop-filter: none;
-    color: rgb(0, 0, 0);
-}
-
-.modal-final {
-    text-align: center;
-}
-
-.modal-final p{
-    text-align: justify;
-    margin-top: 2vh;
-}
-
-.modal-final img {
-    filter: brightness(0);
-    margin: 0vh 2vw;
-}
-
-.close-final {
-    margin: 1vh;
-    align-self: flex-end;
-}
-
-
-
-
-
-
-
-
-
-
 .col {
     transition: all 0.2s;
     text-align: center;
@@ -171,6 +184,8 @@
     width: 20vw;
     overflow: hidden;
     transition: all 0.2s;
+    padding-bottom: 2vh;
+    
 }
 
 @media screen  and (max-width: 1025px){
@@ -211,7 +226,7 @@
         font-size: 33px;
         margin-bottom: 2vh;
     }
-    .info-text-more p {
+    .info-text-more h2 {
         width: 100%;
         font-size: 13px;
         text-align: justify;
@@ -259,6 +274,11 @@
 }
 
 @media screen  and (max-width: 769px){
+    #glow {
+        text-align: center;
+        font-size: 30px;
+        animation: brillar 3s infinite; 
+    }
 
     .carousel-btn {
         height: 10vh;
@@ -294,13 +314,12 @@
     }
 
     .info-text-more h1 {
-        font-size: 33px;
-        margin-bottom: 2vh;
+        margin-bottom: 1vh;
     }
-    .info-text-more p {
+    .info-text-more h2 {
         width: 100%;
-        font-size: 13px;
-        text-align: justify;
+        font-size: 20px;
+        text-align: center;
     }
 
     #card-carousel {
@@ -415,9 +434,6 @@
         padding: 1vw;
     }
 
-    .final {
-        padding: 1vh 5vw;
-    }
 }
 
 
@@ -428,7 +444,12 @@
         padding-bottom: 12vh;
     }
 
+    #more-bg2 {
+        padding-top: 2vh;
+    }
+
     .info-all {
+        padding-top: 0vh;
         width: 70%;
     }
     
@@ -440,7 +461,7 @@
     
     .info-more-bg2 {
         text-align: center;
-        margin: 2vh 4vw;;
+        margin: 0vh 4vw;;
         margin-bottom: 0vh;
     }
 
@@ -489,9 +510,5 @@
         width: fit-content;
         height: fit-content;
         padding: 1vw;
-    }
-
-    .final {
-        padding: 1vh 7vw;
     }
 }
