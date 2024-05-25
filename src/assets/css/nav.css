@@ -1,7 +1,12 @@
+@import 'normalize.css/normalize';
+
 .navbar {
     background-image: url(/src/assets/img/1f1f1f.png);
     background-size: cover;
-    transition: all 0.4s;
+    transition: all 0.4s;    
+    font-family: "Major Mono Display", monospace;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .navbar-toggler {
@@ -86,12 +91,43 @@
     z-index: 20;
 }
 
+.modal {
+    background-color: black;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24'%3E%3Cg fill='%23c4b4a0' fill-opacity='0.20'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 .nav-inactive-color {
     background-color: rgb(0, 0, 0);
     transition: all 0.3s;
     .navbar-brand {
         filter: brightness();
     }
+}
+
+.modal-content {
+    transition: all 0.5s;
+}
+
+.modal-footer .btn{
+    border: none;
+    font-family: "Major Mono Display", monospace;
+    font-style: normal;
+    font-weight: 500;
+    width: fit-content;
+    align-self: center;
+    padding: 1vh 5vh;
+    transition: all 0.2s;
+    background-image: url('/src/assets/img/textureBg.JPG');
+    color: rgb(255, 255, 255);
+}
+
+.modal-footer .btn:hover {
+    border: solid 1px white;
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    background-image: url('/src/assets/img/invert.JPG');
+    background-repeat: no-repeat;
+    animation: moveBackground 60s linear infinite;
 }
 
 .nav-active-color {

@@ -45,7 +45,7 @@ const CreateForm = () => {
 
     return (
     <div className="modal-body">
-        <form onSubmit={handleSubmit} action={`https://formsubmit.co/${mail}`} method="POST">
+        <form onSubmit={handleSubmit} action={`https://formsubmit.co/${mail}`} method="POST" target="_blank">
             <div className="mb-3">
                 <label htmlFor="InputName2" className="form-label">Nombre</label>
                 <input type="name" className="form-control" aria-describedby="nameHelp" name="name" placeholder='nombre completo'  value={name} onChange={(e) => setName(e.target.value)} />

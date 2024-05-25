@@ -1,4 +1,9 @@
+@import 'normalize.css/normalize';
+
 #trabajos-btn {
+    font-family: "Major Mono Display", monospace;
+    font-style: normal;
+    font-weight: 600;
     border: none;
     width: fit-content;
     align-self: center;
@@ -22,5 +27,13 @@
     border-color: rgb(0, 0, 0);
     margin: 0.5vh 1vh;
     padding: 1.5vh 5vh;
-    
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
 }

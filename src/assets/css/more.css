@@ -1,3 +1,5 @@
+@import 'normalize.css/normalize';
+
 .more {
     display: flex;
     flex-direction: column;
@@ -19,6 +21,9 @@
 #glow {
     font-size: 45px;
     animation: brillar 3s infinite; 
+    font-family: "Major Mono Display", monospace;
+    font-weight: 500;
+    font-style: normal;
 }
 
 #join-text{
@@ -41,6 +46,9 @@
 }
 
 .info-all {
+    font-family: "Major Mono Display", monospace;
+    font-weight: 600;
+    font-style: normal;
     width: 50%;
     text-align: center;
     transition: 0.5s;
@@ -58,7 +66,7 @@
 
 .info-text-more h2 {
     font-size: 20px;
-    margin-bottom: 1vh;
+    margin-bottom: 0vh;
 }
 
 
@@ -136,6 +144,9 @@
 }
 
 .card {
+    font-family: "Major Mono Display", monospace;
+
+    font-style: normal;
     border: none;
     background-image: url('/src/assets/img/invert.JPG');
     background-repeat: no-repeat;
@@ -162,7 +173,8 @@
 
 .card-body h5{
     color: #70006e;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 13px;
 }
 
 .card-img-top{
@@ -276,7 +288,7 @@
 @media screen  and (max-width: 769px){
     #glow {
         text-align: center;
-        font-size: 30px;
+        font-size: 22px;
         animation: brillar 3s infinite; 
     }
 
@@ -313,13 +325,10 @@
         margin-bottom: 4vh;
     }
 
-    .info-text-more h1 {
-        margin-bottom: 1vh;
-    }
     .info-text-more h2 {
         width: 100%;
-        font-size: 20px;
-        text-align: center;
+        font-size: 17px;
+        text-align: left;
     }
 
     #card-carousel {
